@@ -1,0 +1,53 @@
+<div class="span10">
+	<h2>Phone Models</h2>
+	<table class="bordered-table zebra-striped">
+		<thead>
+			<tr>
+				<th>#</th>
+				<th>Make</th>
+				<th>Model</th>
+				<th>Price</th>
+				<th>Created</th>
+			</tr>
+		</thead>
+		<tbody>
+		<% for phoneModel in PhoneModels %>
+			<tr>
+				<td><%= phoneModel.id %></td>
+				<td><%= phoneModel.make %></td>
+				<td><%= phoneModel.phone_model %></td>
+				<td><%= phoneModel.price %></td>
+				<td><%= phoneModel.createa_at %></td>
+			</tr>
+		<% end %>
+		</tbody>
+	</table>
+	<h2>Customers</h2>
+	<table class="bordered-table zebra-striped">
+		<thead>
+			<tr>
+				<th>#</th>
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th>Email Address</th>
+				<th>Password</th>
+				<th>Created</th>
+			</tr>
+		</thead>
+		<tbody>
+			<% for customer in Customers %>
+				<tr>
+					<th><%= customer.id %></th>
+					<th><%= customer.fname %></th>
+					<th><%= customer.lname %></th>
+					<th><%= customer.email %></th>
+					<th><%= customer.passwd %></th>
+					<th><%= customer.created_at %></th>
+				</tr>
+			<% end %>
+		</tbody>
+	</table>
+</div>
+<div class="span4">
+	
+</div>

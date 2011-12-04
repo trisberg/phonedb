@@ -12,6 +12,7 @@ class PhoneModels
   property :make        , String
   property :phone_model , String
   property :price       , Float
+  property :desc        , Text
   property :created_at  , DateTime
 end
 
@@ -21,6 +22,7 @@ class Customers
   property :id          , Serial
   property :fname       , String
   property :lname       , String
+  property :email       , String , :format => :email_address
   property :passwd      , String , :length => 18, :default => lambda { |pass| Digest::MD5.hexdigest(pass) }
   property :created_at  , DateTime , :default => Time.now
 end
@@ -40,7 +42,7 @@ post '/login' do
   if params[:user] == "admin" && params[:passwd] == "password"
     redirect '/admin'
   else
-    "try again"
+    "Try Again"
   end
 end
 
