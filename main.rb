@@ -1,12 +1,9 @@
+require 'digest/md5'
 require 'sinatra'
-include 'data.rb'
+require 'data'
 require 'haml'
 
 get '/' do
-	erb :models
-end
-
-get '/models' do
 	erb :models
 end
 
@@ -27,8 +24,17 @@ get '/admin' do
 end
 
 post '/admin' do
-  entry       = models.new
-  entry.make  = params[:make]
-  entry.model = params[:model]
-  entry.price = params[:price]
+  modelEntry = Models.new  {
+    :make       => params[:make],
+    :model      => params[:model],
+    :price      => params[:price],
+    :desc       => params[:desc],
+    :created_at => Time.now
+  }
+
+  customerEntry = Customers.new {
+    :fname  => params[:fname],
+    :lname  => params[:lname],
+    :passwd => params[:passwd]
+  }
 end
