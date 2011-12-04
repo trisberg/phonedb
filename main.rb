@@ -1,6 +1,6 @@
 require 'digest/md5'
 require 'sinatra'
-load 'data.rb'
+require './data'
 require 'haml'
 
 get '/' do
@@ -23,6 +23,7 @@ get '/admin' do
   erb :admin
 end
 
+=begin
 post '/admin' do
   modelEntry = Models.create { 
     :make       => params[:make], 
@@ -36,4 +37,4 @@ post '/admin' do
     lname: params[:lname],
     passwd: params[:passwd]
   }
-end
+end=end
