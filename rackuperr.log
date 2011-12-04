@@ -1,0 +1,39 @@
+c:/Users/Niam/Documents/dev/ruby/learn/gems/sinatra/school/yakMobile/phoneDB/config.ru:2:in `load':
+main.rb:28: syntax error, unexpected tASSOC, expecting '}' (SyntaxError)
+    :make       => params[:make],
+                  ^
+main.rb:29: syntax error, unexpected tASSOC, expecting tCOLON2 or '[' or '.'
+    :model      => params[:model],
+                  ^
+main.rb:30: syntax error, unexpected tASSOC, expecting tCOLON2 or '[' or '.'
+    :price      => params[:price],
+                  ^
+main.rb:31: syntax error, unexpected tASSOC, expecting tCOLON2 or '[' or '.'
+    :desc       =>  params[:desc],
+                  ^
+main.rb:32: syntax error, unexpected tASSOC, expecting tCOLON2 or '[' or '.'
+    :created_at => Time.now }
+                  ^
+main.rb:35: syntax error, unexpected ':', expecting '}'
+    fname: params[:fname],
+          ^
+main.rb:36: syntax error, unexpected tLABEL, expecting '='
+    lname: params[:lname],
+          ^
+main.rb:37: syntax error, unexpected tLABEL, expecting '='
+    passwd: params[:passwd]
+           ^
+        from c:/Users/Niam/Documents/dev/ruby/learn/gems/sinatra/school/yakMobile/phoneDB/config.ru:2:in `block in <main>'
+        from c:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.3.5/lib/rack/builder.rb:51:in `instance_eval'
+        from c:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.3.5/lib/rack/builder.rb:51:in `initialize'
+        from c:/Users/Niam/Documents/dev/ruby/learn/gems/sinatra/school/yakMobile/phoneDB/config.ru:1:in `new'
+        from c:/Users/Niam/Documents/dev/ruby/learn/gems/sinatra/school/yakMobile/phoneDB/config.ru:1:in `<main>'
+        from c:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.3.5/lib/rack/builder.rb:40:in `eval'
+        from c:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.3.5/lib/rack/builder.rb:40:in `parse_file'
+        from c:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.3.5/lib/rack/server.rb:200:in `app'
+        from c:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.3.5/lib/rack/server.rb:301:in `wrapped_app'
+        from c:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.3.5/lib/rack/server.rb:252:in `start'
+        from c:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.3.5/lib/rack/server.rb:137:in `start'
+        from c:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.3.5/bin/rackup:4:in `<top (required)>'
+        from c:/Ruby192/bin/rackup:19:in `load'
+        from c:/Ruby192/bin/rackup:19:in `<main>'
