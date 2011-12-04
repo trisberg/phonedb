@@ -1,3 +1,3 @@
 # phonedb
 
-## a quick and dirty database in datamapper, with 'sinatra'
+a quick and dirty database in datamapper, with `sinatra`
