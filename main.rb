@@ -47,6 +47,8 @@ post '/login' do
 end
 
 get '/admin' do
+  @models = PhoneModels.all :order => :id
+  @customers = Customers.all :order => :id
   erb :admin
 end
 
