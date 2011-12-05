@@ -1,6 +1,0 @@
-!!!5
-%html
-  %head
-    %title= "App" || "Unknown"
-  %body
-    #content= "App"
