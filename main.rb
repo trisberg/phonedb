@@ -1,7 +1,6 @@
 require 'rubygems'
 require 'digest/md5'
 require 'sinatra'
-require 'haml'
 require 'data_mapper'
 
 DataMapper.setup :default, "sqlite3://#{Dir.pwd}/database.db"
