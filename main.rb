@@ -1,3 +1,4 @@
+require 'rubygems'
 require 'digest/md5'
 require 'sinatra'
 require 'haml'
@@ -67,3 +68,9 @@ end
 #     passwd: params[:passwd]
 #   }
 # end
+
+post '/admin' do
+  pmodel = PhoneModels.new
+  pmodel.attributes = { :make => params[:make] , :phone_model => params[:model], :price => params[:price], :desc => params[:desc], :created_at => Time.now }
+  pmodel.save
+end

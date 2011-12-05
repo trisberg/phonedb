@@ -1,4 +1,4 @@
-<div class="span10">
+<div class="span14">
 	<h2>Phone Models</h2>
 	<table class="bordered-table zebra-striped">
 		<thead>
@@ -35,7 +35,7 @@
 			</tr>
 		</thead>
 		<tbody>
-			<% for customer in Customers %>
+			<% for customer in @customers %>
 				<tr>
 					<th><%= customer.id %></th>
 					<th><%= customer.fname %></th>
@@ -47,7 +47,27 @@
 			<% end %>
 		</tbody>
 	</table>
-</div>
-<div class="span4">
 	
+		<h6>Models.add</h6>
+	
+	<form action="/admin" method="post">
+		<div class="clearfix">
+			Make: <input class="xlarge" id="modelsMake" name="make" type="text" size="30">
+		</div>
+		<div class="clearfix">
+			Model: <input class="xlarge" id="modelsMake" name="model" type="text" size="30">
+		</div>
+		<div class="clearfix">
+			Make: <input class="xlarge" id="modelsMake" name="price" type="text" size="30">
+		</div>
+		<div class="clearfix">
+			Make: <input class="xlarge" id="modelsMake" name="make" type="text" size="30">
+		</div>
+		<div class="clearfix">
+			Make: <textarea class="xxlarge" id="textarea2" name="textarea2" rows="3"></textarea>
+		</div>
+	</form>
 </div>
+<!-- <div class="span4">
+	
+</div> -->
