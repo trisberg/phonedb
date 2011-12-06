@@ -72,4 +72,12 @@ post '/admin' do
   pmodel = PhoneModels.new
   pmodel.attributes = { :make => params[:make] , :phone_model => params[:model], :price => params[:price], :desc => params[:desc], :created_at => Time.now }
   pmodel.save
+
+  person = Customers.new
+  person.attributes = { :fname => params[:fname] , :lname => params[:lname], :email => params[:emial], :passwd => params[:passwd], :created_at => Time.now }
+  person.save
+end
+
+get '/env' do
+  ENV.inspect
 end
