@@ -3,7 +3,7 @@ require 'digest/md5'
 require 'sinatra'
 require 'data_mapper'
 
-DataMapper.setup(:default,ENV['DATABASE_URL'] || "sqlite3://#{Dir.pwd}/database.db")
+DataMapper.setup(:default, ENV['DATABASE_URL'] || "sqlite3://#{Dir.pwd}/database.db")
 
 class PhoneModels
   include DataMapper::Resource
@@ -26,9 +26,6 @@ class Customers
   property :passwd      , String , :length => 18, :default => lambda { |pass| Digest::MD5.hexdigest(pass) }
   property :created_at  , DateTime , :default => Time.now
 end
-
-PhoneModels.auto_upgrade!
-Customers.auto_upgrade!
 
 get '/' do
 	erb :index
@@ -78,6 +75,4 @@ post '/admin' do
   person.save
 end
 
-get '/env' do
-  ENV.inspect
-end
+DataMapper.auto_upgrade!
