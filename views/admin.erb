@@ -48,28 +48,36 @@
 			<% end %>
 		</tbody>
 	</table
-	<hr>
 	
-		<h6>Models.add</h6>
+		<h6>Add Entries</h6>
 	
 	<form action="/admin" method="post">
+		<h6>Models</h6>
 		<div class="clearfix">
 			Make: <input class="xlarge" id="modelsMake" name="make" type="text" size="30">
 		</div>
 		<div class="clearfix">
-			Model: <input class="xlarge" id="modelsMake" name="model" type="text" size="30">
+			Model: <input class="xlarge" id="modelsModel" name="model" type="text" size="30">
 		</div>
 		<div class="clearfix">
-			Make: <input class="xlarge" id="modelsMake" name="price" type="text" size="30">
+			Price: <input class="xlarge" id="modelsPrice" name="price" type="text" size="15">
 		</div>
 		<div class="clearfix">
-			Make: <input class="xlarge" id="modelsMake" name="make" type="text" size="30">
+			Description: <textarea class="xxlarge" id="modelsDesc" name="desc" rows="3"></textarea>
+		</div>
+		<hr>
+		<h6>Customers</h6>
+		<div class="clearfix">
+			First name: <input class="xlarge" id="custFirstName" name="make" type="text" size="30">
 		</div>
 		<div class="clearfix">
-			Make: <textarea class="xxlarge" id="textarea2" name="textarea2" rows="3"></textarea>
+			Last name: <input class="xlarge" id="custLastName" name="model" type="text" size="30">
+		</div>
+		<div class="clearfix">
+			Email address: <input class="xlarge" id="custEmail" name="price" type="text" size="30">
+		</div>
+		<div class="clearfix">
+			Password: <input class="xlarge" id="custPasswd" name="price" type="text" size="30">
 		</div>
 	</form>
 </div>
-<!-- <div class="span4">
-	
-</div> -->
