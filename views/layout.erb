@@ -16,13 +16,9 @@
     <!-- <link href="../public/style/bootstrap.css" rel="stylesheet" type="text/css"> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
     <script src="js/prettify.js"></script>
+    <script src="js/bootstrap-twipsy.js"></script>
     <script src="js/bootstrap-popover.js"></script>
 
-    <script>
-      $(document).ready(function(){
-        
-      })
-    </script>
     
     <link href="style/bootstrap.new.css" rel="stylesheet" type="text/css">
     <link href="style/prettify.css" rel="stylesheet">
@@ -86,6 +82,10 @@
       .span14 > h6 {
         margin-bottom: 5px; /*Spaces out the form content*/
       }
+
+      .model {
+        color: #0069d6;
+      }
       </style>
 
     <!-- Le fav and touch icons -->
@@ -93,6 +93,11 @@
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
     <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png"> -->
+    <script>
+      $(document).ready(function(){
+        
+      });
+    </script>
   </head>
 
   <body>
@@ -114,7 +119,7 @@
 
       <div class="content">
         <div class="page-header">
-          <h1>YAK Mobile <small>Database access point</small></h1>
+          <h1 rel="popover" data-content="We're Yak Mobile, a company ">YAK Mobile <small>Database access point</small></h1>
         </div>
         <div class="row">
           <%= yield %>

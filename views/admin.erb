@@ -11,17 +11,23 @@
 			</tr>
 		</thead>
 		<tbody>
-		<% for phoneModel in @models %>
+		<% for phone in @models %>
 			<tr>
-				<td><%= phoneModel.id %></td>
-				<td><%= phoneModel.make %></td>
-				<td><%= phoneModel.phone_model %></td>
-				<td><%= phoneModel.price %></td>
-				<td><%= phoneModel.createa_at %></td>
+				<td><a href="/models/<%= phone.id %>"><%= phone.id %></a></td>
+				<td><%= phone.make %></td>
+				<td><%= phone.phone_model %></td>
+				<td><%= "£" + phone.price %></td>
+				<td><%= phone.created_at %></td>
 			</tr>
 		<% end %>
+		<tr>
+			<td id="desc" colspan="5" data-controls-modal="descModal">Descriptions</td>
+		</tr>
 		</tbody>
 	</table>
+	<script>
+		$('#desc').
+	</script>
 	<hr> 
 	<h2>Customers</h2>
 	<table class="bordered-table zebra-striped">
@@ -38,16 +44,16 @@
 		<tbody>
 			<% for customer in @customers %>
 				<tr>
-					<th><%= customer.id %></th>
-					<th><%= customer.fname %></th>
-					<th><%= customer.lname %></th>
-					<th><%= customer.email %></th>
-					<th><%= customer.passwd %></th>
-					<th><%= customer.created_at %></th>
+					<td><%= customer.id %></th>
+					<td><%= customer.fname %></td>
+					<td><%= customer.lname %></td>
+					<td><%= customer.email %></td>
+					<td><%= customer.passwd.hash %></td>
+					<td><%= customer.created_at %></td>
 				</tr>
 			<% end %>
 		</tbody>
-	</table
+	</table>
 	
 		<h6>Add Entries</h6>
 	
@@ -62,22 +68,23 @@
 		<div class="clearfix">
 			Price: <input class="xlarge" id="modelsPrice" name="price" type="text" size="15">
 		</div>
-		<div class="clearfix">
+		<!-- <div class="clearfix">
 			Description: <textarea class="xxlarge" id="modelsDesc" name="desc" rows="3"></textarea>
-		</div>
+		</div> -->
 		<hr>
 		<h6>Customers</h6>
 		<div class="clearfix">
-			First name: <input class="xlarge" id="custFirstName" name="make" type="text" size="30">
+			First name: <input class="xlarge" id="custFirstName" name="fname" type="text" size="30">
 		</div>
 		<div class="clearfix">
-			Last name: <input class="xlarge" id="custLastName" name="model" type="text" size="30">
+			Last name: <input class="xlarge" id="custLastName" name="lname" type="text" size="30">
 		</div>
 		<div class="clearfix">
-			Email address: <input class="xlarge" id="custEmail" name="price" type="text" size="30">
+			Email address: <input class="xlarge" id="custEmail" name="email" type="text" size="30">
 		</div>
 		<div class="clearfix">
-			Password: <input class="xlarge" id="custPasswd" name="price" type="text" size="30">
+			Password: <input class="xlarge" id="custPasswd" name="passwd" type="text" size="30">
 		</div>
+		<button class="btn primary">Commit</button>
 	</form>
 </div>

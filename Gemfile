@@ -1,9 +1,10 @@
-source "http://rubygems.org"
+#source "http://rubygems.org"
+source :rubygems
 
 gem 'sinatra'
 gem 'data_mapper'
 gem 'rack'
-gem 'thin'
+#gem 'thin'
 
 group :development do
 	gem 'dm-sqlite-adapter'

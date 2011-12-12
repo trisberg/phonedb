@@ -1,0 +1,29 @@
+<div class="span14">
+	<table class="bordered-table zebra-striped">
+		<thead>
+			<tr>
+				<th>#</th>
+				<th>Make</th>
+				<th>Model</th>
+				<th>Price</th>
+				<th>Created</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><%= @model.id %></td>
+				<td><%= @model.make %></td>
+				<td><%= @model.phone_model %></td>
+				<td><%= "£" + @model.price %></td>
+				<td><%= @model.created_at %></td>
+			</tr>
+		</tbody>
+	</table>
+	<h3>Description</h3>
+	<p>
+		<%= @model.desc %>
+	</p>
+	<form action="/models" method="post">
+		<button>Delete!</button>
+	</form>
+</div>
