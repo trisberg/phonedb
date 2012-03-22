@@ -2,7 +2,11 @@ GEM
   remote: http://rubygems.org/
   specs:
     addressable (2.2.6)
+    bcrypt-ruby (3.0.1)
     bcrypt-ruby (3.0.1-x86-mingw32)
+    cf-runtime (0.0.1)
+      crack (~> 0.3.1)
+    crack (0.3.1)
     data_mapper (1.2.0)
       dm-aggregates (~> 1.2.0)
       dm-constraints (~> 1.2.0)
@@ -26,9 +30,9 @@ GEM
       dm-core (~> 1.2.0)
     dm-migrations (1.2.0)
       dm-core (~> 1.2.0)
-    dm-postgres-adapter (1.2.0)
+    dm-mysql-adapter (1.2.0)
       dm-do-adapter (~> 1.2.0)
-      do_postgres (~> 0.10.6)
+      do_mysql (~> 0.10.6)
     dm-serializer (1.2.1)
       dm-core (~> 1.2.0)
       fastercsv (~> 1.5.4)
@@ -52,7 +56,11 @@ GEM
       uuidtools (~> 2.1.2)
     dm-validations (1.2.0)
       dm-core (~> 1.2.0)
-    do_postgres (0.10.7-x86-mingw32)
+    do_mysql (0.10.7)
+      data_objects (= 0.10.7)
+    do_mysql (0.10.7-x86-mingw32)
+      data_objects (= 0.10.7)
+    do_sqlite3 (0.10.7)
       data_objects (= 0.10.7)
     do_sqlite3 (0.10.7-x86-mingw32)
       data_objects (= 0.10.7)
@@ -72,11 +80,13 @@ GEM
     uuidtools (2.1.2)
 
 PLATFORMS
+  ruby
   x86-mingw32
 
 DEPENDENCIES
+  cf-runtime
   data_mapper
-  dm-postgres-adapter
+  dm-mysql-adapter
   dm-sqlite-adapter
   rack
   sinatra

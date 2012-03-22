@@ -3,8 +3,14 @@ require 'data_mapper'
 #require 'dm-timestamps'
 #require 'dm-validations'
 #require 'dm-migrations'
+require 'cfruntime/properties'
 
-DataMapper.setup :default, "sqlite://#{Dir.pwd}/database.db"
+if CFRuntime::CloudApp.running_in_cloud?
+  db = CFRuntime::CloudApp.service_props('mysql')
+  DataMapper.setup :default, "postgresql://#{db[:username]}:#{db[:password]}@#{db[:host]}:#{db[:port]}/#{db[:db]}"
+else
+  DataMapper.setup :default, "sqlite://#{Dir.pwd}/database.db"
+end
 
 class Models
   include DataMapper::Resource
